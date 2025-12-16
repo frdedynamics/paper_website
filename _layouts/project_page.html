@@ -1,45 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="">
-  <meta name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }}</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet" href="./static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/index.js"></script>
-
-  <!-- MathJax -->
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
-        displayMath: [ ['$$', '$$'], ['\\[', '\\]'] ],
-        processEscapes: true, 
-        tags: 'all',
-      },
-      svg: {
-        fontCache: 'global'
-      }
-    };
-  </script>
-  <script
-    type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-  </script>
-</head>
-<body>
-
+---
+layout: default
+---
 
 <section class="hero">
   <div class="hero-body">
@@ -47,25 +8,54 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">{{ page.title }}</h1>
+
           {% if page.authors %}
           <div class="is-size-5 publication-authors">
+            {% for author in page.authors %}
             <span class="author-block">
-              {{ page.authors }}
+              {% if author.name %}
+                {% if author.url %}
+                  <a href="{{ author.url }}">{{ author.name }}</a>
+                {% else %}
+                  {{ author.name }}
+                {% endif %}
+              {% else %}
+                {{ author }}
+              {% endif %}
+              {% unless forloop.last %}, {% endunless %}
             </span>
+            {% endfor %}
           </div>
           {% endif %}
 
           {% if page.affiliations %}
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              {{ page.affiliations }}
-            </span>
+            {% for affiliation in page.affiliations %}
+              <span class="author-block">
+                {{ affiliation }}
+                {% unless forloop.last %}, {% endunless %}
+              </span>
+            {% endfor %}
           </div>
           {% endif %}
 
+          {% if page.links or page.paper or page.video or page.code or page.data %}
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              {% for link in page.links %}
+              <span class="link-block">
+                <a href="{{ link.url }}"
+                   class="external-link button is-normal is-rounded is-dark">
+                  {% if link.icon %}
+                  <span class="icon">
+                    <i class="{{ link.icon }}"></i>
+                  </span>
+                  {% endif %}
+                  <span>{{ link.label }}</span>
+                </a>
+              </span>
+              {% endfor %}
+
               {% if page.paper %}
               <span class="link-block">
                 <a href="{{ page.paper }}"
@@ -77,7 +67,7 @@
                 </a>
               </span>
               {% endif %}
-              <!-- Video Link. -->
+
               {% if page.video %}
               <span class="link-block">
                 <a href="{{ page.video }}"
@@ -89,7 +79,7 @@
                 </a>
               </span>
               {% endif %}
-              <!-- Code Link. -->
+
               {% if page.code %}
               <span class="link-block">
                 <a href="{{ page.code }}"
@@ -101,7 +91,7 @@
                   </a>
               </span>
               {% endif %}
-              <!-- Dataset Link. -->
+
               {% if page.data %}
               <span class="link-block">
                 <a href="{{ page.data }}"
@@ -115,6 +105,7 @@
               {% endif %}
             </div>
           </div>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -122,28 +113,9 @@
 </section>
 
 <section class="section">
-<div class="container is-max-desktop">
-
-<div class="content">
-  {{ content }}
-</div>
-
-</div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://github.com/shunzh/project_website">the Jekyll fork</a>.
-          </p>
-        </div>
-      </div>
+  <div class="container is-max-desktop">
+    <div class="content publication-body">
+      {{ content }}
     </div>
   </div>
-</footer>
-
-</body>
-</html>
+</section>

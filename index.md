@@ -4,13 +4,26 @@ permalink: /
 
 title: On Computable Numbers, with an Application to the Entscheidungsproblem
 authors:
-    A. M. Turing
+  - name: A. M. Turing
+    url: https://en.wikipedia.org/wiki/Alan_Turing
+  - name: John Doe
+    url: https://example.com/johndoe
 affiliations:
-    King's College, Cambridge
+  - King's College, Cambridge
+  - Example University
 paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 video: https://www.youtube.com/results?search_query=turing+machine
 code: https://github.com/topics/turing-machines
 data: https://huggingface.co/docs/datasets
+links:
+  - label: Slides
+    url: https://example.com/slides.pdf
+    icon: fas fa-file-powerpoint
+carousel:
+  - image: /static/image/Turing_machine.png
+    caption: A classic Turing machine illustration.
+  - image: https://picsum.photos/seed/turing/960/540
+    caption: Placeholder slide for results.
 ---
 
 <!-- Using HTML to center the abstract -->
@@ -57,6 +70,8 @@ Turing's main objective in this paper was to investigate the notion of computabi
 ![Turing Machine](/static/image/Turing_machine.png)
 
 *Figure 1: A representation of a Turing Machine. Source: [Wiki](https://en.wikipedia.org/wiki/Turing_machine).*
+
+{% include carousel.html items=page.carousel slides_to_show=2 autoplay=true autoplay_speed=2500 %}
 
 ## Table: Comparison of Computable and Non-Computable Numbers
 
