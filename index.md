@@ -4,13 +4,13 @@ permalink: /
 
 title: On Computable Numbers, with an Application to the Entscheidungsproblem
 authors:
-  - name: A. M. Turing
+  - name: A. M. Turing $^1$
     url: https://en.wikipedia.org/wiki/Alan_Turing
-  - name: John Doe
+  - name: John Doe $^2$
     url: https://example.com/johndoe
 affiliations:
-  - King's College, Cambridge
-  - Example University
+  - $^1$ King's College, Cambridge
+  - $^2$ Example University
 paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 video: https://www.youtube.com/results?search_query=turing+machine
 code: https://github.com/topics/turing-machines
