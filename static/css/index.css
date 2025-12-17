@@ -7,6 +7,38 @@ body {
   color: #000;
 }
 
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logos img {
+  height: 64px;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .footer-logos img {
+    height: 40px;
+  }
+}
+
+.footer .content {
+  justify-content: center;
+  text-align: center; 
+  margin-top: 5rem;
+  margin-bottom: 0;
+  font-size: smaller;
+}
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
 .link-block a {
   margin-top: 5px;
   margin-bottom: 5px;
