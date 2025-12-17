@@ -21,7 +21,7 @@ Front matter fields supported by the layout:
 - `title` (string)
 - `authors` (list of strings or objects with `name`/`url`)
 - `affiliations` (list of strings)
-- `paper`, `video`, `code`, `data` (URLs for the buttons)
+- `paper`, `video`, `code`, `slides`, `data` (URLs for the buttons)
 - `links` (optional list of `{label, url, icon}` to add more buttons)
 - `carousel` (optional list of slides, see below)
 
@@ -40,10 +40,11 @@ paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 video: https://www.youtube.com/results?search_query=turing+machine
 code: https://github.com/topics/turing-machines
 data: https://huggingface.co/docs/datasets
+slides: https://example.com/slides.pdf
 links:
-  - label: Slides
-    url: https://example.com/slides.pdf
-    icon: fas fa-file-powerpoint
+  - label: Extra link
+    url: https://example.com/extra
+    icon: fas fa-link
 ---
 ```
 

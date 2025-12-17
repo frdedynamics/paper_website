@@ -11,14 +11,14 @@ authors:
 affiliations:
   - $^1$ King's College, Cambridge
   - $^2$ Example University
+  
 paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
 video: https://www.youtube.com/results?search_query=turing+machine
 code: https://github.com/topics/turing-machines
 data: https://huggingface.co/docs/datasets
-links:
-  - label: Slides
-    url: https://example.com/slides.pdf
-    icon: fas fa-file-powerpoint
+arxiv: https://arxiv.org/abs/1234.56789
+slides: https://example.com/slides.pdf
+
 carousel:
   - image: /static/image/Turing_machine.png
     caption: A classic Turing machine illustration.
