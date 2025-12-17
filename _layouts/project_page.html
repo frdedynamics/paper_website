@@ -12,27 +12,19 @@ layout: default
           {% if page.authors %}
           <div class="is-size-5 publication-authors">
             {% for author in page.authors %}
-            <span class="author-block">
-              {% if author.name %}
-                {% if author.url %}
-                  <a href="{{ author.url }}">{{ author.name }}{% unless forloop.last %}, {% endunless %}</a>
-                {% else %}
-                  {{ author.name }}{% unless forloop.last %}, {% endunless %}
-                {% endif %}
-              {% else %}
-                {{ author }}{% unless forloop.last %}, {% endunless %}
-              {% endif %}
-            </span>
+              <span class="author-block">
+                {{- author.name -}}
+                {% if author.affils -%}<sup>{{ author.affils | join: ',' }}</sup>{%- endif -%}
+                {% unless forloop.last -%}, {% endunless -%}
+              </span>
             {% endfor %}
           </div>
           {% endif %}
 
           {% if page.affiliations %}
-          <div class="is-size-5 publication-authors">
-            {% for affiliation in page.affiliations %}
-              <span class="author-block">
-                {{ affiliation }}{% unless forloop.last %}, {% endunless %}
-              </span>
+          <div class="is-size-6 publication-authors affiliations-line">
+            {% for aff in page.affiliations %}
+              <span class="author-block"><sup>{{ aff.id }}</sup> {{ aff.name }}{% unless forloop.last -%}, {% endunless -%}</span>
             {% endfor %}
           </div>
           {% endif %}
@@ -90,6 +82,30 @@ layout: default
               </span>
               {% endif %}
 
+              {% if page.colab %}
+              <span class="link-block">
+                <a href="{{ page.colab }}"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-infinity"></i>
+                  </span>
+                  <span>Colab</span>
+                  </a>
+              </span>
+              {% endif %}
+
+              {% if page.demo %}
+              <span class="link-block">
+                <a href="{{ page.demo }}"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-laptop"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
+              {% endif %}
+
               {% if page.slides %}
               <span class="link-block">
                 <a href="{{ page.slides }}"
@@ -129,14 +145,33 @@ layout: default
             </div>
           </div>
           {% endif %}
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+{% if page.abstract %}
+<section class="section abstract-section">
   <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="content column is-four-fifths">
+        <h2>Abstract</h2>
+        <div class="content has-text-justified">
+          {{ page.abstract | markdownify }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section main-section">
+  <div class="container is-max-desktop">
+    {% if page.abstract %}
+    <hr class="abstract-separator">
+    {% endif %}
     <div class="content publication-body">
       {{ content }}
     </div>

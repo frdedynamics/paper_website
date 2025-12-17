@@ -65,6 +65,10 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.affiliations-line {
+  margin-top: 0.25rem;
+}
+
 .publication-venue {
   color: #555;
   width: fit-content;
@@ -109,6 +113,23 @@ body {
 .publication-body img {
   max-width: 100%;
   height: auto;
+}
+
+.abstract-section {
+  padding-bottom: 1.5rem;
+}
+
+.main-section {
+  padding-top: 1rem;
+}
+
+.abstract-separator {
+  display: block;
+  margin: 1.25rem auto 1.5rem;
+  width: 100%;
+  max-width: 960px;
+  border: 0;
+  border-top: 1px solid #fafafa4d;
 }
 
 .results-carousel {
