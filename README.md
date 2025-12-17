@@ -2,7 +2,7 @@
 
 This is a Jekyll-ified version of the [Nerfies website](https://nerfies.github.io). All content lives in Markdown; HTML is only needed for advanced layouts. Core assets (Bulma, Font Awesome, Academicons, bulma-carousel, fonts) are self-hosted for reliability.
 
-Here is an [example website](https://shunzh.github.io/project_website/).
+Here is an [example website](https://frdedynamics.github.io/paper_website/).
 
 ## Getting started
 
