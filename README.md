@@ -1,9 +1,11 @@
 # Paper Website
-This is a template for creating simple websites for research papers. Making such accompanying websites becomes increasingly common to showcase code, data, videos, and demos related to the paper. It offers a possibility to present your work in a more engaging way than just the static PDF and can help increase visibility and impact. The website does not have to be a full replica of the paper, but rather a hub to highlight key aspects and provide easy access to resources. Before using this template, make sure to check the copyright and sharing policies of the conference or journal where your paper is published. Often one retains ownership of the auther versions (manuscript, preprint), but not of the publisher's formatted/typeset version. This means you typically can reuse your content, figures, etc on your paper website, but you must not upload the publisher's PDF. Rather, use the `paper` button (see below) to link to the official version on the publisher's site. 
+This is a template for creating simple websites for research papers. Making such accompanying websites becomes increasingly common to showcase code, data, videos, and demos related to the paper. It offers a possibility to present your work in a more engaging way than just the static PDF and can help increase visibility and impact.  
+The website does not have to be a full replica of the paper, but rather a hub to highlight key aspects and provide easy access to resources.  
+Before using this template, make sure to check the copyright and sharing policies of the conference or journal where your paper is published. Often one retains ownership of the auther versions (manuscript, preprint), but not of the publisher's formatted/typeset version. This means you typically can reuse your content, figures, etc on your paper website, but you must not upload the publisher's PDF. Rather, use the `paper` button (see below) to link to the official version on the publisher's site. 
 
 The template is a Jekyll-ified version of the [Nerfies website](https://nerfies.github.io). All content lives in Markdown; HTML is only needed for advanced layouts. Core assets (Bulma, Font Awesome, Academicons, bulma-carousel, fonts) are self-hosted for reliability.
 
-Here is an [example website](https://frdedynamics.github.io/paper_website/) that is created from this template.
+Here is an [example website](https://frdedynamics.github.io/paper_website/) that is created from this template repo.
 
 ## Getting started
 
@@ -18,7 +20,7 @@ Here is an [example website](https://frdedynamics.github.io/paper_website/) that
 
 ## Site config
 
-- In `_config.yml` set `url` to your origin (e.g., `https://<username>.github.io`). As a default the `url` is set to `https://frdedynamics.github.io`, which is correct if you created your repo in our organization. If you create the repo in your own account, change it accordingly.
+In `_config.yml` set `url` to your origin (e.g., `https://<username>.github.io`). As a default the `url` is set to `https://frdedynamics.github.io`, which is correct if you created your repo in our organization. If you create the repo in your own account, change it accordingly.
 
 Deployment (GitHub Pages via Actions):
 - The repo includes `.github/workflows/pages.yml`. On push to `main`, it builds and deploys to GitHub Pages automatically.
@@ -61,6 +63,7 @@ colab: https://colab.research.google.com/
 demo: https://example.com/demo
 slides: https://example.com/slides.pdf
 arxiv: https://arxiv.org/abs/1234.56789
+cad: https://example.com/cadfile
 links:
   - label: Extra link
     url: https://example.com/extra
@@ -116,4 +119,4 @@ MathJax is enabled. Use `$…$` for inline and `$$…$$` for display equations.
 
 ### Buttons
 
-Built-in buttons show when the corresponding field is set: `paper`, `video`, `code`, `colab`, `demo`, `slides`, `data`, `arxiv`. Use `links` for any extras and supply an icon class (Font Awesome or Academicons).
+Built-in buttons show when the corresponding field is set in the front matter: `paper`, `video`, `code`, `colab`, `demo`, `cad`, `slides`, `data`, `arxiv`. Use `links` for any extras and supply an icon class (Font Awesome or Academicons).
