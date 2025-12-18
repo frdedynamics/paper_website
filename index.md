@@ -23,6 +23,7 @@ arxiv: https://arxiv.org/abs/1234.56789
 colab: https://colab.research.google.com/
 demo: https://example.com/demo
 slides: https://example.com/slides.pdf
+cad: https://example.com/cadfile
 
 carousel:
   - image: /static/image/Turing_machine.png

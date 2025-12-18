@@ -106,6 +106,18 @@ layout: default
               </span>
               {% endif %}
 
+              {% if page.cad %}
+              <span class="link-block">
+                <a href="{{ page.cad }}"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-cubes"></i>
+                  </span>
+                  <span>CAD</span>
+                  </a>
+              </span>
+              {% endif %}
+
               {% if page.slides %}
               <span class="link-block">
                 <a href="{{ page.slides }}"

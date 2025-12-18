@@ -30,7 +30,7 @@ Front matter fields supported by the layout:
 - `title` (string; title of the paper)
 - `authors` (list of strings or objects with `name`/`url`/`affils`; `affils` is a list of ids)
 - `affiliations` (list of strings or objects with `id`/`name`; `id` is used for superscripts)
-- `paper`, `video`, `code`, `colab`, `demo`, `slides`, `data`, `arxiv` (URLs for the built-in buttons)
+- `paper`, `video`, `code`, `colab`, `demo`, `cad`, `slides`, `data`, `arxiv` (URLs for the built-in buttons)
 - `links` (optional list of `{label, url, icon}` to add more buttons)
 - `abstract` (multi-line text; use `|` to start a block)
 - `carousel` (optional list of slides, see below)
