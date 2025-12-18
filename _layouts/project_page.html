@@ -185,7 +185,7 @@ layout: default
           {% else %}
             {% assign hero_video = vsrc | relative_url %}
           {% endif %}
-          <video class="hero-media-video" controls loop muted playsinline>
+          <video class="hero-media-video" controls loop muted playsinline autoplay>
             <source src="{{ hero_video }}">
           </video>
         {% elsif media.embed %}
