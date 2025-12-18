@@ -27,7 +27,7 @@ Deployment (GitHub Pages via Actions):
 - To enable this in your repo, on Github go to Settings → Pages, and set Source to “GitHub Actions.”
 
 ## Writing content (`index.md`)
-All content is in `index.md`. The template supports various front matter fields to populate buttons, authors, affiliations, abstract, and a carousel.
+All content is in `index.md`. The template supports various front matter fields to populate buttons, authors, affiliations, abstract, and a carousel. Populate the fields you need and delete the rest.
 Front matter fields supported by the layout:
 - `title` (string; title of the paper)
 - `authors` (list of strings or objects with `name`/`url`/`affils`; `affils` is a list of ids)
