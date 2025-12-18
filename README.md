@@ -112,7 +112,7 @@ Carousel items already run through `relative_url`, so `/static/...` works there.
 
 Embed YouTube/Vimeo with Markdown links, or add `video:` in front matter to show the button. For inline embeds, paste the iframe HTML into Markdown if needed. For local videos, put the file under `static/` and use a video tag, e.g.:
 ```html
-<video controls width="100%">
+<video controls width="100%" autoplay muted loop playsinline>
   <source src="{{ '/static/video/demo.mp4' | relative_url }}" type="video/mp4">
 </video>
 ```
