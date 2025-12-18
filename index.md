@@ -25,6 +25,10 @@ demo: https://example.com/demo
 slides: https://example.com/slides.pdf
 cad: https://example.com/cadfile
 
+eyecatcher_media:
+  image: /static/image/turing_machine.gif
+  caption: "This visualisation shows a Turing Machine with a simple set of rules incrementing 39 to 40 in binary. Source: [Medium](https://medium.com/@tmlkm/turing-completeness-and-early-computing-b41cd41c83f8)."
+
 carousel:
   - image: /static/image/Turing_machine.png
     caption: A classic Turing machine illustration.

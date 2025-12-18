@@ -115,6 +115,29 @@ body {
   height: auto;
 }
 
+.hero-media-section {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.hero-media-img,
+.hero-media-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-media-video {
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-media-caption {
+  margin-top: 0.75rem;
+  color: #555;
+}
+
 .abstract-section {
   padding-bottom: 1.5rem;
 }

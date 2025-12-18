@@ -35,6 +35,7 @@ Front matter fields supported by the layout:
 - `paper`, `video`, `code`, `colab`, `demo`, `cad`, `slides`, `data`, `arxiv` (URLs for the built-in buttons)
 - `links` (optional list of `{label, url, icon}` to add more buttons)
 - `abstract` (multi-line text; use `|` to start a block)
+- `eyecatcher_media` (optional highlight between buttons and abstract; set one of `image`, `video`, or `embed`, plus optional `caption`/`alt`)
 - `carousel` (optional list of slides, see below)
 
 Example front matter:
@@ -64,6 +65,9 @@ demo: https://example.com/demo
 slides: https://example.com/slides.pdf
 arxiv: https://arxiv.org/abs/1234.56789
 cad: https://example.com/cadfile
+eyecatcher_media:
+  image: /static/image/Turing_machine.png
+  caption: A classic Turing machine illustration.
 links:
   - label: Extra link
     url: https://example.com/extra

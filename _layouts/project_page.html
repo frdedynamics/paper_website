@@ -164,6 +164,46 @@ layout: default
   </div>
 </section>
 
+{% if page.eyecatcher_media %}
+{% assign media = page.eyecatcher_media %}
+<section class="section hero-media-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-10 has-text-centered">
+        {% if media.image %}
+          {% assign src = media.image %}
+          {% if src contains '://' %}
+            {% assign hero_src = src %}
+          {% else %}
+            {% assign hero_src = src | relative_url %}
+          {% endif %}
+          <img class="hero-media-img" src="{{ hero_src }}" alt="{{ media.alt | default: 'Project media' }}">
+        {% elsif media.video %}
+          {% assign vsrc = media.video %}
+          {% if vsrc contains '://' %}
+            {% assign hero_video = vsrc %}
+          {% else %}
+            {% assign hero_video = vsrc | relative_url %}
+          {% endif %}
+          <video class="hero-media-video" controls loop muted playsinline>
+            <source src="{{ hero_video }}">
+          </video>
+        {% elsif media.embed %}
+          <div class="hero-media-embed">
+            {{ media.embed }}
+          </div>
+        {% endif %}
+        {% if media.caption %}
+          <div class="hero-media-caption content has-text-centered">
+            {{ media.caption | markdownify }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if page.abstract %}
 <section class="section abstract-section">
   <div class="container is-max-desktop">
